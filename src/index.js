@@ -15,7 +15,10 @@ function reducer(state = {}, { type }) {
 // store 생성
 const store = createStore(reducer);
 
+// 구독자 등록
+store.subscribe(() => {
+  console.log(store.getState());
+});
+
 // init 액션 실행
 store.dispatch({ type: 'init' });
-
-console.log(store.getState());
