@@ -13,7 +13,7 @@ function reducer(state = {}, { type }) {
 }
 
 // store 생성
-const store = createStore();
+const store = createStore(reducer);
 
 // init 액션 실행
 store.dispatch({ type: 'init' });
